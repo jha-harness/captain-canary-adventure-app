@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: captain-canary-app
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: captain-canary-app
