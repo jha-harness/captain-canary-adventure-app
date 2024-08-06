@@ -1,3 +1,3 @@
 image:
   name: jha-cca-registry/cca-app
-  tag: <+trigger.artifact.tag>
+  tag: <+trigger.artifactData.tag>
