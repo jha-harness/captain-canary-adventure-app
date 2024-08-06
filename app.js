@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Serve static files
+// Serve static files for app
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
@@ -38,6 +38,7 @@ app.get('/', (req, res) => {
                         text.innerHTML = "It's " + new Date().toLocaleTimeString('en-US', { timeZone: 'Pacific/Honolulu', hour: '2-digit', minute: '2-digit', hour12: true }) + " in Hawaii.<br>While you're stuck debugging, Captain Canary is catching waves and enjoying the Aloha spirit! 🏄‍♂️🌺";
                     } else {
                         img.src = '/canary-working.png';
+                        btn.textContent = 'Go on Vacation!¸';
                         btn.textContent = 'Go on Vacation!';
                         text.innerHTML = 'Pod Name: ${podName}';
                     }
@@ -47,7 +48,7 @@ app.get('/', (req, res) => {
         <body>
             <img id="canaryImg" src="/canary-working.png" alt="Captain Canary Working">
             <div id="content">
-                <button id="toggleBtn" onclick="toggleImage()">Go on Vacation!</button>
+                <button id="toggleBtn" onclick="toggleImage()">Go on Vacation!!!</button>
                 <p id="displayText">Pod Name: ${podName}</p>
             </div>
         </body>
