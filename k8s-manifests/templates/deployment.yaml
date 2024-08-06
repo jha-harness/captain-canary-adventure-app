@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-nodejs-app
+  name: captain-canary-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: simple-nodejs-app
+      app: captain-canary-app
   template:
     metadata:
       labels:
-        app: simple-nodejs-app
+        app: captain-canary-app
     spec:
       containers:
-      - name: simple-nodejs-app
+      - name: captain-canary-app
         image: us-east1-docker.pkg.dev/sales-209522/{{.Values.image.name}}:{{.Values.image.tag}}
         ports:
         - containerPort: 3000

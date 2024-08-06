@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
         <body>
             <img id="canaryImg" src="/canary-working.png" alt="Captain Canary Working">
             <div id="content">
-                <button id="toggleBtn" onclick="toggleImage()">Go on Vacation!!!</button>
+                <button id="toggleBtn" onclick="toggleImage()">Go on Vacation!</button>
                 <p id="displayText">Pod Name: ${podName}</p>
             </div>
         </body>
